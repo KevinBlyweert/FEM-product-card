@@ -1,0 +1,118 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    padding: 1.5rem .8rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+
+    .mobilePic {
+        border-radius: 1.2rem 1.2rem 0 0;
+        max-height: 15rem;
+    }
+
+    .desktopPic {
+        display: none;
+    }
+
+    .cardContent {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.2rem;
+
+        .tag,
+        .cardText,
+        .oldPrice {
+            font-size: .9rem;
+            color: hsl(228, 12%, 48%);
+        }
+
+        .tag {
+            letter-spacing: .2rem;
+        }
+
+        .cardTitle a,
+        .currentPrice {
+            font-family: "Fraunces", serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .cardPrices {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+
+            .currentPrice {
+                color: hsl(158, 36%, 37%);
+                font-size: 1.8rem;
+            }
+
+            .oldPrice {
+                text-decoration: line-through;
+            }
+        }
+
+        button {
+            background-color: hsl(158, 36%, 37%);
+            border: none;
+            border-radius: .5rem;
+            color: hsl(0, 0%, 100%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            height: 3rem;
+            font-weight: 700;
+
+            img {
+                height: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 35rem) {
+    main {
+        max-width: 45rem;
+        max-height: 25rem;
+        flex-direction: row;
+
+        .mobilePic {
+            display: none;
+        }
+
+        .desktopPic {
+            display: block;
+            border-radius: 1.2rem 0 0 1.2rem;
+            width: 50%;
+        }
+
+        .cardContent {
+            width: 50%;
+            min-height: 100%;
+            button:hover {
+                background-color: hsl(212, 21%, 14%);
+                cursor: pointer;
+            }
+        }
+    }
+}
